@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Martin Nguyen</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!--placeholder for textarea not appearing -->
+    <script> 
+        window.addEventListener('load', function () {
+            document.getElementById('message').value = '';
+        });
+    </script>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Martin Nguyen <img src="android-chrome-192x192.png" alt="favicon symbol"></h1>
+    </header>
+    
+    <nav class="globalNav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>  
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+    </nav>
+
+    <main>
+        <h2>Contact</h2>
+        <section>
+            <h3 style="color: #F2BD1D;">Please enter the required information to contact.</h3>
+            <p style="color:  #F2BD1D;">* indicates required information</p>
+           
+            <article>
+                <form action="/results" method="POST"> <!-- Updated action and method -->
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        
+                        <label for="fullName" class="required"> Name:</label>
+                            <input 
+                            type="text" 
+                            name="fullName" 
+                            id="fullName" 
+                            required
+                            size="25"   
+                            placeholder="Enter your name" 
+                            autofocus />
+                       
+                        
+                        <label for="email" class="required">Email:</label>
+                            <input 
+                              type="email" 
+                              name="email" 
+                              id="email" 
+                              required
+                              size="30" 
+                              pattern="[^ @]+@[^ @]+.[a-z]+"
+                              placeholder="placeholder@website.com" />
+                        
+                        
+                        <p>
+                            <label for="message" class="required">Message:</label>
+                            <textarea 
+                                id="message" 
+                                name="message"   
+                                required 
+                                placeholder="Type your message here">
+                            </textarea>
+                        </p>
+
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Optional Questions</legend>
+
+                        <label for="selectFootball">Who will win the Super Bowl?:</label>
+                            <select name="superBowl" id="selectFootball">
+                                <option value="N/A">N/A </option>
+                                <option value="the 49ers">49ers</option>
+                                <option value="the Eagles">Eagles</option>
+                                <option value="the Chiefs">Chiefs</option>
+                                <option value="the Dolphins">Dolphins</option>
+                            </select>
+
+                            <p>
+                                <label>Which programming language is your favorite?:</label>
+                                <label for ="noFavorite">
+                                    <input type="radio" id="noFavorite" name="favLanguage" value="no favorite language" checked > 
+                                    I do not have a favorite </label>
+                                
+                                <label for="python">
+                                    <input type="radio" id="python" name="favLanguage" value="Python"> 
+                                    Python</label>
+                                <label for="cpp">
+                                    <input type="radio" id="cpp" name="favLanguage" value="C++"> 
+                                    C++</label>
+                                <label for="javaScript">
+                                    <input type="radio" id="javaScript" name="favLanguage" value="Javascript"> 
+                                    Javascript</label>
+                                <label for="html">
+                                    <input type="radio" id="html" name="favLanguage" value="HTML"> 
+                                    HTML</label>
+                            </p>
+
+                            <p>
+                                <label>What kind of sports do you follow:</label>
+                                <label for="soccer">
+                                    <input type="checkbox" id="soccer" name="sports" value="Soccer"> 
+                                    Soccer</label>
+                                <label for="football">
+                                    <input type="checkbox" id="football" name="sports" value="Football"> 
+                                    Football</label>
+                                <label for="basketball">
+                                    <input type="checkbox" id="basketball" name="sports" value="Basketball"> 
+                                    Basketball</label>
+                                <label for="other">
+                                    <input type="checkbox" id="other" name="sports" value="Other"> 
+                                    Other</label>
+                                <label for="none">
+                                    <input type="checkbox" id="other" name="sports" value="no sports." checked> 
+                                    None</label>
+                            </p>
+                            
+                            <label id = "submit">
+                                <button type="submit" id="submit" name="results">Submit</button>
+                            </label>
+                        
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Martin Nguyen</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Martin Nguyen - Web Dev Concepts</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+       <!--placeholder for textarea not appearing -->
+       <script> 
+        window.addEventListener('load', function () {
+            document.getElementById('orderInstructions').value = '';
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Martin Nguyen <img src="android-chrome-192x192.png" alt="favicon symbol"></h1>
+    </header>
+    <nav class="globalNav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>  
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+    </nav>
+   
+
+    <main>
+        <section>
+            <h2>Order Page</h2>
+            <article>
+                <p>Welcome to the order page! Here, you can view a list of products and place your order. Browse through our selection and follow the instructions to complete your purchase.</p>
+                <form action="/orderEndpoint" method="POST" class = "sidebyside">
+                    
+                    <fieldset id = "orderDetails">
+                        <legend>Contact Information</legend>
+                        
+                        <label for="fullName" class="required"> Name:</label>
+                            <input 
+                            type="text" 
+                            name="fullName" 
+                            id="fullName" 
+                            required
+                            size="25"   
+                            placeholder="Enter your name" 
+                            autofocus 
+                            />
+                        
+                        
+                        <label for="email" class="required">Email:</label>
+                            <input 
+                              type="email" 
+                              name="email" 
+                              id="email" 
+                              required
+                              size="30" 
+                              pattern="[^ @]+@[^ @]+.[a-z]+"
+                              placeholder="placeholder@website.com" 
+                            />
+                        
+                        
+                        <label for="orderAddress" class="required"> Address:</label>
+                        <input 
+                            type="text" 
+                            name="orderAddress" 
+                            id="orderAddress" 
+                            required
+                            size="25"   
+                            placeholder="address, city, state, zip" 
+                        />
+                    
+
+                        <p>
+                            <label for="orderInstructions" > Additional instructions:</label>
+                            <textarea 
+                                id="orderInstructions" 
+                                name="orderInstructions"    
+                                placeholder="Enter additional instructions">
+                            </textarea>
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset id="petShop">
+                        <legend>Pet Product Selection</legend>
+                        <p>
+                            <strong>Note:</strong> You may only select one product.
+                        </p>
+
+                        <table id="productSelection">
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AGYM</td>
+                                    <td>
+                                        <label for="agymOption">
+                                            <input type="radio"required
+                                             name="productName" id="agym" value="Spinning Cat Scratcher Ball"  checked />
+                                            Spinning Cat Scratcher Ball
+                                        </label>
+                                    </td>
+                                    <td>$52.99</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Jasonwell</td>
+                                    <td>
+                                        <label for="jasonwellOption">
+                                            <input type="radio" name="productName" id="jasonwell" value="Foldable Dog Pool" />
+                                            Foldable Dog Pool
+                                        </label>
+                                    </td>
+                                    <td>$27.25</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Expawlorer</td>
+                                    <td>
+                                        <label for="expawlorerOption">
+                                            <input type="radio" name="productName" id="expawlorer" value="Dog Fence Window" />
+                                            Dog Fence Window
+                                        </label>
+                                    </td>
+                                    <td>$30.50</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Lollimeow</td>
+                                    <td>
+                                        <label for="lollimeowOption">
+                                            <input type="radio" name="productName" id="lollimeow" value="Capsule Pet Travel Backpack" />
+                                            Capsule Pet Travel Backpack
+                                        </label>
+                                    </td>
+                                    <td>$59.00</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Drool'd</td>
+                                    <td>
+                                        <label for="drooldOption">
+                                            <input type="radio" name="productName" id="droold" value="Cat Hamster Wheel" />
+                                            Cat Hamster Wheel
+                                        </label>
+                                    </td>
+                                    <td>$349.75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <label for="quantity">Enter Quantity between 1 & 200:</label>
+                        <input type="number" name="quantity" id="quantity" placeholder="Quantity" maxlength="3" minlength="1" max="200" required/>
+                        
+                        <label id = "submitTwo">
+                            <button type="submit" name="submitOrder">Submit Order</button>
+                        </label>
+                    </fieldset>
+                </div>
+                </form>
+            </article>
+        </section>
+    
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Martin Nguyen</p>
+    </footer>
+    
+</body>
+</html>

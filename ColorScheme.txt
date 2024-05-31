@@ -1,0 +1,11 @@
+white       #D9D6D1
+blue        #6275DE
+purple      #5A375F
+red         #A23C2D
+brown       #402E0D
+lightBrown  #594A1C
+yellow      #F2BD1D	
+
+blueTransparent rbga(98, 117, 222, .5)
+
+whiteTransparent rbga(217, 214, 209, .7)

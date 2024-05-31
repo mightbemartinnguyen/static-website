@@ -1,0 +1,437 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+    --white: #D9D6D1;
+    --blue: #6275DE;
+    --purple: #5A375F;
+    --red: #A23C2D;
+    --brown: #402E0D;
+    --lightBrown: #594A1C;
+    --yellow: #F2BD1D;
+    --blueTransparent: rgba(98, 117, 222, 0.6);
+    --whiteTransparent: rgba(217, 214, 209, 0.9);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-color:;
+    background-image: url(images/background-image.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: var(--white);
+    font-family: 'Chivo', sans-serif;
+    margin:0 auto;
+    padding:0;
+    max-width: 1150px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--whiteTransparent);
+    color: var(--blue);
+    padding: 0.005%;
+    text-align: center;
+    border:3px solid var(--white);
+
+    
+  }
+  main {
+    background-color: var(--blueTransparent);
+    color: var(--white);
+    margin: 0.008%;
+    padding: 0.2%;
+    border:2px solid var(--blue);
+
+  }
+  section {
+    margin: 1%;
+    
+
+  }
+  article {
+    border:3px solid var(--yellow);
+    margin: 5%;
+    padding: 1%;
+    background-color: var(--whiteTransparent);
+    color: var(--brown)
+  }
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--brown);
+    color: var(--yellow);
+    margin: 0;
+    padding: 0.009%;
+    text-align: right;
+    padding-right: 15px;
+    border:2px solid var(--brown)
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav.globalNav {
+    text-align: center;
+    width: 99.4%;
+    text-decoration: none;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    border:3px solid var(--purple);
+    flex-flow: row wrap;
+  }
+  
+  nav.globalNav a {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.7%;
+    margin-left: 2%;
+    text-decoration: none;
+  }
+  
+  nav.globalNav a:hover {
+  }
+  
+  nav.localNav {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.1%;
+    border-bottom:2px solid var(--red);
+    flex-flow: row wrap;
+  }
+  
+  nav.localNav a {
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.75%;
+    margin: 0.4%;
+    font-size: 90%;
+    text-decoration: none;
+  }
+  
+  nav.localNav a:hover {
+  
+  }
+
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Playfair Display', serif;}
+  h1 {
+    
+  }
+  h2 {
+    color: var(--white);
+    margin-left: 1%;
+  }
+  h3 {
+    color: var(--red);
+  }
+  h4 {
+    color: var(--purple);
+  }
+  h5 {
+    
+  }
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse:collapse;
+  }
+  caption {
+    background-color:var(--blueTransparent);  
+    border:1px solid var(--lightBrown);  
+    color:var(--purple);
+    font-weight:bold;
+    padding:2%;
+  }
+  thead {}
+  tbody {
+    text-align:center;
+  
+  }
+  tfoot {}
+  tr th {
+    border-bottom: 2px solid var(--yellow);
+    padding: 20px;
+  }
+  td:nth-child(3) {text-align:right;}
+    td:nth-child(even) {
+      background-color: var(--whiteTransparent);
+    }
+    td:nth-child(odd) {
+      background-color: var(--yellow);
+    }
+  th {
+  }
+  tr td {
+    padding: 20px;
+    border-bottom: 2px solid var(--blue);
+    
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {
+    font-family: 'Chivo', sans-serif;
+  }
+  fieldset {
+    border: 3px solid var(--purple);
+    background-color: var(--whiteTransparent);
+    margin-top: 0.88%;
+    padding: 2%;
+    width: 42%;
+    margin-left: 2%;
+    margin-right: 1%;
+    display: inline-block;
+    font-size: 95%; 
+    
+  }
+
+  #container {
+    display: flex;
+  }
+  
+  #orderDetails {
+    border: 2px solid var(--purple);
+    background-color: var(--whiteTransparent);
+    padding: 0.7%;
+    width: 32%;
+    margin-left: 1%;
+    margin-right: 2%;
+    font-size: 94%;
+  }
+  
+  #petShop {
+    border: 2px solid var(--brown);
+    background-color: var(--whiteTransparent);
+    padding: 0.8%;
+    width: 57%;
+    margin-left: 2%;
+    margin-right: 1%;
+    font-size: 97%;
+    color: var(--purple);
+    
+  }
+
+    legend {
+      color: var(--red);
+      font-size: 150%;
+    }
+  label {
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 0.5em;
+    font-size: 115%;
+    color: var(--lightBrown);
+    
+  }
+
+  input:invalid {
+    border:3px solid red;
+  }
+  input:valid {
+    border:2px solid green;
+  }
+
+  
+  label.required::after {
+    content: ' *'; /* Add a red asterisk (*) after the label text */
+    color: red;
+    display: inline; /* Make the asterisk appear on the same line */
+  }
+
+  *::placeholder{
+    color: var(--blue)
+  }
+
+
+  input, select {
+    font-size:105%;
+    padding:2.5%;
+    font-family:inherit;
+    margin-bottom: 2%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 1%; /* Adjust margin for better spacing */
+    
+  }
+
+   button {
+    margin-top: 3%;
+    font-size: 105%;
+    padding: 5%;
+    font-family: inherit;
+    margin-bottom: 2%;
+    background-color: var(--red); 
+    color: var(--yellow); 
+    float: right;
+}
+
+  button[name="submitOrder"]{
+    padding: 2.5%;
+    margin-bottom: 5%;
+    margin-right: 3%;
+  }
+
+  input {
+    padding: 3%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+  input[type="email"] {
+    width: 100%;
+  }
+  select {
+    
+  }
+    optgroup {}
+    option {
+    }
+  textarea {
+    padding: 3%;
+    font-size:112%;
+    width: 92%;
+    height: 250px;
+    font-family:inherit;
+  }
+
+  textarea:invalid {
+    border:3px solid red;
+  }
+  textarea:valid {
+    border:2px solid green;
+  }
+
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {
+    width: 400px;
+    margin:.75%;
+    padding: 0.5%;
+    border:3px solid var(--brown);
+    margin-right: 6%;
+  }
+    figcaption {
+    display:block;
+    padding:3px;
+    color: var(--lightBrown);
+  }
+    figure img {
+      width:100%;
+    }
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+      display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .gallery img {
+    width: 100%; 
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
