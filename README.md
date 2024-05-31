@@ -29,5 +29,5 @@ This project showcases various web development concepts through a static website
 ## Screenshots
 ![Image 1](images/i1.png)
 ![Image 2](images/i2.png)
-![Image 3](images/i3.png)
+![Image 3](images/i3.jpg)
 ![Image 4](images/i4.png)
